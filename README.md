@@ -295,6 +295,10 @@ python scripts/generate_status.py
 
 当前状态见 [`STATUS.md`](STATUS.md)：全部 208 个定理和引理均已完成，源码中没有证明占位符，也没有导入归档的旧证明模块。
 
+### 严格正确性审计
+
+完整步骤见 [strict-proof.md](strict-proof.md)。
+
 ## 目录
 
 ```text
