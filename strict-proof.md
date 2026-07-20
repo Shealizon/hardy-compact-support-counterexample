@@ -1,8 +1,7 @@
-# Lean 证明严格正确性审计
+# Lean 证明严格正确性检验
 
 普通的 `lake build` 只能说明 Lean 接受了项目；它不能单独排除文件中存在
-`sorry`，也不能确认主定理的条件没有被悄悄删改。下面不使用封装脚本，
-而是把每一步及其输出直接显示出来。所有命令都在项目根目录执行。
+`sorry`，也不能确认主定理的条件没有被悄悄删改。因此这里采用了更加严格的检验。所有命令都在项目根目录执行。
 
 ## 第一步：查看所有本地改动
 
@@ -11,7 +10,7 @@ git status --short
 git diff -- HardyCompactSupport.lean HardyCompactSupport lakefile.lean lean-toolchain lake-manifest.json
 ```
 
-这一步不能证明数学正确，但能防止把未经查看的修改混入验收。若审计者保存了一个
+这一步能防止把未经查看的修改混入验收。若审计者保存了一个
 可信提交，还应将 `<可信提交>` 换成它的提交号，直接比较入口和配置：
 
 ```powershell
