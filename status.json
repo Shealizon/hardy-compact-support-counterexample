@@ -1,0 +1,1466 @@
+{
+  "build_ok": true,
+  "forbidden_old_imports": [],
+  "declaration_count": 208,
+  "complete": 208,
+  "incomplete": 0,
+  "declarations": [
+    {
+      "name": "exists_nontrivial_endpoint_solution_with_compactly_supported_real_potential",
+      "kind": "theorem",
+      "file": "HardyCompactSupport.lean",
+      "line": 25,
+      "complete": true
+    },
+    {
+      "name": "RN_sub_inf_num",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/AlgebraicIdentities.lean",
+      "line": 45,
+      "complete": true
+    },
+    {
+      "name": "RD_sub_inf_num",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/AlgebraicIdentities.lean",
+      "line": 54,
+      "complete": true
+    },
+    {
+      "name": "RN_tail_degree",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/AlgebraicIdentities.lean",
+      "line": 63,
+      "complete": true
+    },
+    {
+      "name": "RD_tail_degree",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/AlgebraicIdentities.lean",
+      "line": 77,
+      "complete": true
+    },
+    {
+      "name": "compactProfileData_exists",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ConstructedSolution.lean",
+      "line": 97,
+      "complete": true
+    },
+    {
+      "name": "compactYSmooth",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/ConstructedSolution.lean",
+      "line": 126,
+      "complete": true
+    },
+    {
+      "name": "compactScaleSmooth",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/ConstructedSolution.lean",
+      "line": 135,
+      "complete": true
+    },
+    {
+      "name": "compactBSmooth",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/ConstructedSolution.lean",
+      "line": 141,
+      "complete": true
+    },
+    {
+      "name": "compactCandidate_smooth",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ConstructedSolution.lean",
+      "line": 155,
+      "complete": true
+    },
+    {
+      "name": "compactCandidate_nonzero",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ConstructedSolution.lean",
+      "line": 203,
+      "complete": true
+    },
+    {
+      "name": "nonzero_solution",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/DecayEstimates.lean",
+      "line": 19,
+      "complete": true
+    },
+    {
+      "name": "bounded_real_scalar_potential",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/DecayEstimates.lean",
+      "line": 28,
+      "complete": true
+    },
+    {
+      "name": "endpoint_weighted_L2",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/DecayEstimates.lean",
+      "line": 38,
+      "complete": true
+    },
+    {
+      "name": "endpoint_L2",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/DecayEstimates.lean",
+      "line": 52,
+      "complete": true
+    },
+    {
+      "name": "compactCandidate_bounded",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/EndpointDecayAndSupport.lean",
+      "line": 20,
+      "complete": true
+    },
+    {
+      "name": "compactCandidate_compact_support",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/EndpointDecayAndSupport.lean",
+      "line": 42,
+      "complete": true
+    },
+    {
+      "name": "compactEndpointZeroNormSq",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/EndpointDecayAndSupport.lean",
+      "line": 60,
+      "complete": true
+    },
+    {
+      "name": "compactEndpointOneNormSq",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/EndpointDecayAndSupport.lean",
+      "line": 82,
+      "complete": true
+    },
+    {
+      "name": "compactCandidate_endpoint_integrable",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/EndpointDecayAndSupport.lean",
+      "line": 105,
+      "complete": true
+    },
+    {
+      "name": "normalized_compact_endpoint",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/EndpointDecayAndSupport.lean",
+      "line": 128,
+      "complete": true
+    },
+    {
+      "name": "constructedPotential_has_compact_support",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/EndpointVerification.lean",
+      "line": 20,
+      "complete": true
+    },
+    {
+      "name": "endpoint_amplitude_nonzero",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 167,
+      "complete": true
+    },
+    {
+      "name": "endpoint_solution_nonzero",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 183,
+      "complete": true
+    },
+    {
+      "name": "qSym_half_le",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 193,
+      "complete": true
+    },
+    {
+      "name": "rational_tail_bound",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 201,
+      "complete": true
+    },
+    {
+      "name": "even_potential_bound",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 211,
+      "complete": true
+    },
+    {
+      "name": "endpointB_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 240,
+      "complete": true
+    },
+    {
+      "name": "endpointB_differentiableAt",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 258,
+      "complete": true
+    },
+    {
+      "name": "endpointB_width_transport",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 270,
+      "complete": true
+    },
+    {
+      "name": "phase_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 292,
+      "complete": true
+    },
+    {
+      "name": "phase_x_second_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 312,
+      "complete": true
+    },
+    {
+      "name": "phase_x_complex_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 326,
+      "complete": true
+    },
+    {
+      "name": "phaseExp_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 341,
+      "complete": true
+    },
+    {
+      "name": "endpointPhaseFactor_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 373,
+      "complete": true
+    },
+    {
+      "name": "endpointPhaseXFactor_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 383,
+      "complete": true
+    },
+    {
+      "name": "phase_x_width_form",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 408,
+      "complete": true
+    },
+    {
+      "name": "phase_xx_width_form",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 427,
+      "complete": true
+    },
+    {
+      "name": "endpointPhaseXFactor_width_form",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 446,
+      "complete": true
+    },
+    {
+      "name": "endpointPhaseXXFactor_width_form",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 458,
+      "complete": true
+    },
+    {
+      "name": "phase_energy_width_identity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 470,
+      "complete": true
+    },
+    {
+      "name": "endpointPhaseFactor_mul_xFactor_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 499,
+      "complete": true
+    },
+    {
+      "name": "phase_t_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 531,
+      "complete": true
+    },
+    {
+      "name": "phase_t_complex_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 564,
+      "complete": true
+    },
+    {
+      "name": "phaseExp_t_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 583,
+      "complete": true
+    },
+    {
+      "name": "endpointScale_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 622,
+      "complete": true
+    },
+    {
+      "name": "endpointScale_x_second_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 633,
+      "complete": true
+    },
+    {
+      "name": "endpointScale_t_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 646,
+      "complete": true
+    },
+    {
+      "name": "endpointScale_differentiableAt_t",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 658,
+      "complete": true
+    },
+    {
+      "name": "endpointWidthFactor_t_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 669,
+      "complete": true
+    },
+    {
+      "name": "endpointScale_sq_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 697,
+      "complete": true
+    },
+    {
+      "name": "endpointScale_sq_x_second_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 712,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_profile",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 733,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenProfile_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 744,
+      "complete": true
+    },
+    {
+      "name": "endpointProfileSlope_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 786,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenProfile_second_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 819,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenProfile_mul_slope_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 850,
+      "complete": true
+    },
+    {
+      "name": "endpointProfile_real_identity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 863,
+      "complete": true
+    },
+    {
+      "name": "endpointExpFactor_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 875,
+      "complete": true
+    },
+    {
+      "name": "endpointRationalFactor_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 904,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenProfile_scale_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 928,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 954,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_x_deriv_ratio",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 991,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_x_second_deriv_ratio",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1010,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_x_deriv_differentiableAt",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1075,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_differentiableAt_x",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1122,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_x_complex_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1151,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_differentiableAt_t",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1161,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_t_deriv_ratio",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1198,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_t_complex_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1260,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenSolution_x_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1272,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenSolution_x_deriv_compact",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1305,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenSolution_x_deriv_differentiableAt",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1315,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenAmplitude_x_second_complex_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1365,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenSolutionX_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1377,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenSolution_x_second_deriv_reduce",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1434,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenSolution_x_second_deriv_compact",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1447,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenSolution_t_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1457,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenSolution_t_deriv_compact",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1495,
+      "complete": true
+    },
+    {
+      "name": "schrodingerResidual_derivative_reduction",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1507,
+      "complete": true
+    },
+    {
+      "name": "schrodingerResidual_compact",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1520,
+      "complete": true
+    },
+    {
+      "name": "compact_residual_decomposition",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1533,
+      "complete": true
+    },
+    {
+      "name": "compact_residual_implies_schrodinger",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1561,
+      "complete": true
+    },
+    {
+      "name": "endpointEvenPotential_width_form",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1576,
+      "complete": true
+    },
+    {
+      "name": "amplitude_transport_identity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1592,
+      "complete": true
+    },
+    {
+      "name": "amplitude_transport_q_identity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1613,
+      "complete": true
+    },
+    {
+      "name": "amplitude_real_identity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1627,
+      "complete": true
+    },
+    {
+      "name": "compact_residual_identity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1668,
+      "complete": true
+    },
+    {
+      "name": "weighted_amplitude_zero",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1681,
+      "complete": true
+    },
+    {
+      "name": "weighted_amplitude_one",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1709,
+      "complete": true
+    },
+    {
+      "name": "sqrt_two_inv_sq",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1737,
+      "complete": true
+    },
+    {
+      "name": "weighted_amplitude_zero_sq",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1749,
+      "complete": true
+    },
+    {
+      "name": "weighted_amplitude_one_sq",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1760,
+      "complete": true
+    },
+    {
+      "name": "weighted_tail_standard",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1771,
+      "complete": true
+    },
+    {
+      "name": "weighted_tail_bound",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1782,
+      "complete": true
+    },
+    {
+      "name": "weighted_amplitude_zero_tail_bound",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1795,
+      "complete": true
+    },
+    {
+      "name": "weighted_amplitude_one_tail_bound",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1804,
+      "complete": true
+    },
+    {
+      "name": "standard_tail_integrable",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1813,
+      "complete": true
+    },
+    {
+      "name": "square_tail_le_standard_tail",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1822,
+      "complete": true
+    },
+    {
+      "name": "weighted_amplitude_zero_standard_bound",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1834,
+      "complete": true
+    },
+    {
+      "name": "weighted_amplitude_one_standard_bound",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1842,
+      "complete": true
+    },
+    {
+      "name": "solution_definition",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1852,
+      "complete": true
+    },
+    {
+      "name": "potential_definition",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1859,
+      "complete": true
+    },
+    {
+      "name": "schrodinger_equation",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1866,
+      "complete": true
+    },
+    {
+      "name": "endpoint_gaussian_L2",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1879,
+      "complete": true
+    },
+    {
+      "name": "real_scalar_endpoint",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ExplicitSolution.lean",
+      "line": 1891,
+      "complete": true
+    },
+    {
+      "name": "gaussianKernel_continuous",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 32,
+      "complete": true
+    },
+    {
+      "name": "gaussianKernel_integrable",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 41,
+      "complete": true
+    },
+    {
+      "name": "gaussianHalfMass_sub_primitive",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 49,
+      "complete": true
+    },
+    {
+      "name": "gaussianTail_pos",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 61,
+      "complete": true
+    },
+    {
+      "name": "gaussianKernel_tendsto_zero",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 72,
+      "complete": true
+    },
+    {
+      "name": "gaussianFirstMoment_tail",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 82,
+      "complete": true
+    },
+    {
+      "name": "gaussianTail_le",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 115,
+      "complete": true
+    },
+    {
+      "name": "exteriorProfile_halfMass_pos",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 145,
+      "complete": true
+    },
+    {
+      "name": "exteriorProfile_halfMass_le",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 155,
+      "complete": true
+    },
+    {
+      "name": "gaussianKernel_hasDerivAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 176,
+      "complete": true
+    },
+    {
+      "name": "gaussianPrimitive_hasDerivAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 187,
+      "complete": true
+    },
+    {
+      "name": "gaussianPrimitive_smooth",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 197,
+      "complete": true
+    },
+    {
+      "name": "exteriorProfile_smooth",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 213,
+      "complete": true
+    },
+    {
+      "name": "exteriorProfile_hasDerivAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 222,
+      "complete": true
+    },
+    {
+      "name": "exteriorProfile_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 273,
+      "complete": true
+    },
+    {
+      "name": "exteriorProfile_first_hasDerivAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 282,
+      "complete": true
+    },
+    {
+      "name": "exteriorProfile_second_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 305,
+      "complete": true
+    },
+    {
+      "name": "exteriorProfile_ode",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 320,
+      "complete": true
+    },
+    {
+      "name": "weightedExteriorMaster_eq",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 338,
+      "complete": true
+    },
+    {
+      "name": "exteriorMasterProfile_smooth",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 351,
+      "complete": true
+    },
+    {
+      "name": "exteriorMasterProfile_halfMass_pos",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 361,
+      "complete": true
+    },
+    {
+      "name": "exteriorMasterProfile_hasDerivAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 374,
+      "complete": true
+    },
+    {
+      "name": "exteriorMasterFirst_hasDerivAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 394,
+      "complete": true
+    },
+    {
+      "name": "exteriorMasterProfile_ode",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/GaussianTailProfile.lean",
+      "line": 422,
+      "complete": true
+    },
+    {
+      "name": "real_scalar_endpoint",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/IntermediateResults.lean",
+      "line": 16,
+      "complete": true
+    },
+    {
+      "name": "transport_xi_coeff",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/PhaseEquation.lean",
+      "line": 19,
+      "complete": true
+    },
+    {
+      "name": "transport_mass_coeff",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/PhaseEquation.lean",
+      "line": 27,
+      "complete": true
+    },
+    {
+      "name": "phase_continuity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/PhaseEquation.lean",
+      "line": 35,
+      "complete": true
+    },
+    {
+      "name": "gluingCutoffs_smooth",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 28,
+      "complete": true
+    },
+    {
+      "name": "rightGluingCutoff_values",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 44,
+      "complete": true
+    },
+    {
+      "name": "leftGluingCutoff_values",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 59,
+      "complete": true
+    },
+    {
+      "name": "gluingCutoff_bounds",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 74,
+      "complete": true
+    },
+    {
+      "name": "gluedProfile_smooth",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 93,
+      "complete": true
+    },
+    {
+      "name": "gluedProfile_zero",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 108,
+      "complete": true
+    },
+    {
+      "name": "gluedProfile_eq_right",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 118,
+      "complete": true
+    },
+    {
+      "name": "gluedProfile_eq_left",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 130,
+      "complete": true
+    },
+    {
+      "name": "convexBlend_pos",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 137,
+      "complete": true
+    },
+    {
+      "name": "gluedProfile_pos",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 153,
+      "complete": true
+    },
+    {
+      "name": "gluedProfile_derivative_data",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 194,
+      "complete": true
+    },
+    {
+      "name": "gluedRemainder_smooth",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 208,
+      "complete": true
+    },
+    {
+      "name": "gluedProfile_oscillator_identity",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 221,
+      "complete": true
+    },
+    {
+      "name": "reflectedExteriorMaster_ode",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 232,
+      "complete": true
+    },
+    {
+      "name": "gluedRemainder_eq_right",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 262,
+      "complete": true
+    },
+    {
+      "name": "gluedRemainder_eq_left",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 284,
+      "complete": true
+    },
+    {
+      "name": "gluedRemainder_exterior",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 308,
+      "complete": true
+    },
+    {
+      "name": "gluedRemainder_bounded_exists",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 322,
+      "complete": true
+    },
+    {
+      "name": "gluedWeightedSquare_continuous",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 352,
+      "complete": true
+    },
+    {
+      "name": "gluedWeightedSquare_right_bound",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 362,
+      "complete": true
+    },
+    {
+      "name": "gluedWeightedSquare_left_bound",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 387,
+      "complete": true
+    },
+    {
+      "name": "gluedWeightedSquare_integrableOn_right",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 415,
+      "complete": true
+    },
+    {
+      "name": "gluedWeightedSquare_integrableOn_left",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 429,
+      "complete": true
+    },
+    {
+      "name": "gluedWeightedSquare_integrable",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/PositiveProfile.lean",
+      "line": 443,
+      "complete": true
+    },
+    {
+      "name": "quadratic_cancel",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ResidualIdentity.lean",
+      "line": 20,
+      "complete": true
+    },
+    {
+      "name": "even_residual",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ResidualIdentity.lean",
+      "line": 28,
+      "complete": true
+    },
+    {
+      "name": "odd_residual",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/ResidualIdentity.lean",
+      "line": 47,
+      "complete": true
+    },
+    {
+      "name": "compactPhase_x_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 22,
+      "complete": true
+    },
+    {
+      "name": "compactPhase_x_second_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 33,
+      "complete": true
+    },
+    {
+      "name": "compactPhase_t_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 47,
+      "complete": true
+    },
+    {
+      "name": "compactAmplitude_x_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 80,
+      "complete": true
+    },
+    {
+      "name": "compactAmplitude_x_second_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 103,
+      "complete": true
+    },
+    {
+      "name": "compactAmplitude_t_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 127,
+      "complete": true
+    },
+    {
+      "name": "complexPhaseFactor_hasDerivAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 163,
+      "complete": true
+    },
+    {
+      "name": "complexAmplitudePhase_hasDerivAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 177,
+      "complete": true
+    },
+    {
+      "name": "compactAmplitude_differentiableAt_t",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 188,
+      "complete": true
+    },
+    {
+      "name": "compactPhase_differentiableAt_t",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 204,
+      "complete": true
+    },
+    {
+      "name": "compactSolution_t_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 217,
+      "complete": true
+    },
+    {
+      "name": "compactAmplitude_differentiableAt_x",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 234,
+      "complete": true
+    },
+    {
+      "name": "compactPhase_differentiableAt_x",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 246,
+      "complete": true
+    },
+    {
+      "name": "compactSolution_x_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 257,
+      "complete": true
+    },
+    {
+      "name": "compactAmplitude_x_deriv_differentiableAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 274,
+      "complete": true
+    },
+    {
+      "name": "compactPhase_x_deriv_differentiableAt",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 291,
+      "complete": true
+    },
+    {
+      "name": "compactSolution_x_second_deriv",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 307,
+      "complete": true
+    },
+    {
+      "name": "compactResidual_decomposition",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 358,
+      "complete": true
+    },
+    {
+      "name": "compactResidual_imaginary",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 388,
+      "complete": true
+    },
+    {
+      "name": "compactResidual_real",
+      "kind": "lemma",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 429,
+      "complete": true
+    },
+    {
+      "name": "compactCandidate_schrodinger",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/SchrodingerIdentity.lean",
+      "line": 487,
+      "complete": true
+    },
+    {
+      "name": "symmetric_q_pos",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 34,
+      "complete": true
+    },
+    {
+      "name": "symmetric_q_ne_zero",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 42,
+      "complete": true
+    },
+    {
+      "name": "symmetric_sqrt_sq",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 49,
+      "complete": true
+    },
+    {
+      "name": "symmetric_y_sq",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 57,
+      "complete": true
+    },
+    {
+      "name": "qSym_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 66,
+      "complete": true
+    },
+    {
+      "name": "qSym_hasDerivAt",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 83,
+      "complete": true
+    },
+    {
+      "name": "qSym_deriv_fun",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 88,
+      "complete": true
+    },
+    {
+      "name": "qSym_second_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 97,
+      "complete": true
+    },
+    {
+      "name": "symmetric_y_pos",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 112,
+      "complete": true
+    },
+    {
+      "name": "symmetric_y_ne_zero",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 121,
+      "complete": true
+    },
+    {
+      "name": "symmetric_y_cube_ne_zero",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 128,
+      "complete": true
+    },
+    {
+      "name": "sqrt_qSym_hasDerivAt",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 135,
+      "complete": true
+    },
+    {
+      "name": "ySym_hasDerivAt",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 144,
+      "complete": true
+    },
+    {
+      "name": "ySymPrime_hasDerivAt",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 159,
+      "complete": true
+    },
+    {
+      "name": "ySym_deriv_fun",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 188,
+      "complete": true
+    },
+    {
+      "name": "ySym_second_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 197,
+      "complete": true
+    },
+    {
+      "name": "solve_ypp_from_cube",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 206,
+      "complete": true
+    },
+    {
+      "name": "ySym_cube_mul_second_deriv",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 219,
+      "complete": true
+    },
+    {
+      "name": "ySym_ode",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/TimeScaling.lean",
+      "line": 232,
+      "complete": true
+    },
+    {
+      "name": "q_identity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/WidthEquation.lean",
+      "line": 34,
+      "complete": true
+    },
+    {
+      "name": "endpoint_q_identity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/WidthEquation.lean",
+      "line": 44,
+      "complete": true
+    },
+    {
+      "name": "sqrt_chain_to_ode",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/WidthEquation.lean",
+      "line": 60,
+      "complete": true
+    },
+    {
+      "name": "sqrt_chain_to_ode_real",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/WidthEquation.lean",
+      "line": 76,
+      "complete": true
+    },
+    {
+      "name": "symmetric_q_identity",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/WidthEquation.lean",
+      "line": 93,
+      "complete": true
+    },
+    {
+      "name": "symmetric_y_ode_formal",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/WidthEquation.lean",
+      "line": 102,
+      "complete": true
+    },
+    {
+      "name": "width_y_ode",
+      "kind": "theorem",
+      "file": "HardyCompactSupport/WidthEquation.lean",
+      "line": 121,
+      "complete": true
+    }
+  ],
+  "build_output": "_̵d̵e̵f̵,̵ ̵p̵o̵w̵_̵t̵w̵o̵]̵[̲p̲o̲w̲_̲t̲w̲o̲]̲\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: HardyCompactSupport/GaussianTailProfile.lean:413:47: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: HardyCompactSupport/GaussianTailProfile.lean:413:47: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n⚠ [8560/8574] Replayed HardyCompactSupport.PositiveProfile\nwarning: HardyCompactSupport/PositiveProfile.lean:244:48: This simp argument is unused:\n  Function.comp_def\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: HardyCompactSupport/PositiveProfile.lean:255:51: This simp argument is unused:\n  Function.comp_def\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: HardyCompactSupport/PositiveProfile.lean:237:50: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:244:69: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:255:72: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:237:50: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:244:69: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:255:72: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\ninfo: HardyCompactSupport/PositiveProfile.lean:393:26: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nwarning: HardyCompactSupport/PositiveProfile.lean:393:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n⚠ [8570/8574] Replayed HardyCompactSupport.SchrodingerIdentity\nwarning: HardyCompactSupport/SchrodingerIdentity.lean:121:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: HardyCompactSupport/SchrodingerIdentity.lean:352:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nℹ [8571/8574] Replayed HardyCompactSupport.EndpointDecayAndSupport\ninfo: HardyCompactSupport/EndpointDecayAndSupport.lean:81:2: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: HardyCompactSupport/EndpointDecayAndSupport.lean:104:2: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n✔ [8573/8574] Built HardyCompactSupport (61s)\nBuild completed successfully (8574 jobs).\n"
+}
