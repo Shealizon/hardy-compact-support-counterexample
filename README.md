@@ -36,15 +36,214 @@ theorem exists_nontrivial_endpoint_solution_with_compactly_supported_real_potent
 5. 对每个固定时刻 `t`，`V t` 的拓扑支撑 `tsupport (V t)` 是 `ℝ` 中的紧集。
 6. `u 0` 和 `u 1` 满足临界 Gaussian 加权平方可积性。
 
-### 关于紧支撑条件
+## 数学说明
 
-主定理没有引入统一半径 `R`，而是直接使用紧支撑的内在定义：
+### 1. 方程与临界端点条件
 
-```lean
-∀ t ∈ Set.Icc (0 : ℝ) 1, IsCompact (tsupport (V t))
-```
+考虑一维含势 Schrodinger 方程
 
-证明内部会先得到势函数在某个依赖于时间的闭区间之外为零，再证明其函数支撑的闭包包含于该闭区间。这个中间半径只服务于证明，不属于主定理的结论。
+$$
+i\partial_t u(t,x)+\partial_x^2u(t,x)=V(t,x)u(t,x),
+\qquad (t,x)\in[0,1]\times\mathbb R.
+$$
+
+目标是构造一个非零光滑解 $u$ 和一个光滑、有界、实值的势 $V$，使得
+
+$$
+e^{x^2/4}u(0,x),\qquad e^{x^2/4}u(1,x)
+$$
+
+都属于 $L^2(\mathbb R)$。等价地，需要证明
+
+$$
+\int_{\mathbb R}e^{x^2/2}|u(0,x)|^2\,dx<\infty,
+\qquad
+\int_{\mathbb R}e^{x^2/2}|u(1,x)|^2\,dx<\infty.
+$$
+
+这里的系数 $1/4$ 正是归一化时间区间 $[0,1]$ 上使用的 Hardy 临界 Gaussian 权重。
+
+### 2. 时间宽度与相似变量
+
+定义
+
+$$
+q(t)=(1-t)^2+t^2,
+\qquad
+y(t)=2\sqrt{q(t)},
+\qquad
+s=\frac{x}{y(t)}.
+$$
+
+因为
+
+$$
+q(t)=2\left(t-\frac12\right)^2+\frac12>0,
+$$
+
+所以 $y(t)$ 在所有时刻都严格为正。它还满足
+
+$$
+y(t)^2=4q(t),
+\qquad
+y''(t)=\frac{16}{y(t)^3}.
+$$
+
+相似变量 $s=x/y(t)$ 把随时间变化的空间尺度转换为一个固定剖面变量。
+
+### 3. Gaussian 尾部外解
+
+从 Gaussian 核
+
+$$
+K(x)=e^{-2x^2}
+$$
+
+出发，令
+
+$$
+J(x)=\int_0^x e^{-2s^2}\,ds,
+\qquad
+C_*=\int_0^\infty e^{-2s^2}\,ds.
+$$
+
+定义外部函数
+
+$$
+H_C(x)=e^{2x^2}\bigl(C-J(x)\bigr),
+\qquad
+F_C(x)=e^{-x^2}H_C(x).
+$$
+
+选择 $C=C_*$ 后，在 $x\ge 0$ 上有
+
+$$
+C_*-J(x)=\int_x^\infty e^{-2s^2}\,ds>0.
+$$
+
+因此 $F_{C_*}$ 是正的衰减外解，并满足
+
+$$
+F_{C_*}''(x)=\bigl(4x^2+2\bigr)F_{C_*}(x).
+$$
+
+Gaussian 尾积分估计还给出临界加权可积性。证明在负半轴使用反射函数 $F_{C_*}(-x)$。
+
+### 4. 正剖面的平滑拼接
+
+取两个光滑过渡函数 $\chi_+$ 和 $\chi_-$，把右侧外解、中心常数函数 $1$ 和左侧反射外解拼成
+
+$$
+P(x)=1+\chi_+(x)\bigl(F_{C_*}(x)-1\bigr)
+       +\chi_-(x)\bigl(F_{C_*}(-x)-1\bigr).
+$$
+
+构造保证
+
+$$
+P\in C^\infty(\mathbb R),
+\qquad
+P(x)>0,
+\qquad
+P(0)=1.
+$$
+
+因为 $P$ 从不为零，可以定义剖面余项
+
+$$
+r(x)=\frac{P''(x)}{P(x)}-4x^2.
+$$
+
+于是恒有振子型方程
+
+$$
+P''(x)=\bigl(4x^2+r(x)\bigr)P(x).
+$$
+
+在拼接区间之外，$P$ 就是外解或其反射，因此
+
+$$
+r(x)=2
+$$
+
+在充分大的 $|x|$ 上成立。同时，构造证明了
+
+$$
+\int_{\mathbb R}\bigl(e^{x^2}P(x)\bigr)^2\,dx<\infty.
+$$
+
+### 5. 解与实势的构造
+
+令
+
+$$
+b(t)=\frac{2t-1}{4q(t)},
+\qquad
+r_\infty=2,
+$$
+
+并定义振幅和相位
+
+$$
+A(t,x)=\frac{1}{\sqrt{y(t)}}P\!\left(\frac{x}{y(t)}\right),
+$$
+
+$$
+\phi(t,x)=b(t)x^2+rac{r_\infty}{4}\arctan(2t-1).
+$$
+
+候选解为
+
+$$
+u(t,x)=A(t,x)e^{i\phi(t,x)},
+$$
+
+势函数为
+
+$$
+V(t,x)=
+\frac{r\!\left(x/y(t)\right)-r_\infty}{y(t)^2}.
+$$
+
+这个公式直接说明 $V$ 是实值函数。由于 $r-r_\infty$ 有界且 $y(t)$ 始终远离零，$V$ 在 $[0,1]\times\mathbb R$ 上一致有界。
+
+### 6. Schrodinger 恒等式
+
+把 $u=Ae^{i\phi}$ 代入方程后，剩余项分成实部和虚部。虚部由振幅输运恒等式消去，实部则由
+
+$$
+P''(s)=\bigl(4s^2+r(s)\bigr)P(s),
+\qquad
+y''(t)=\frac{16}{y(t)^3}
+$$
+
+以及相位导数恒等式消去。最终得到逐点等式
+
+$$
+i\partial_tu+\partial_x^2u=Vu.
+$$
+
+此外，当 $|x/y(t)|$ 充分大时 $r(x/y(t))=r_\infty$，所以对应的 $V(t,x)$ 等于零。
+
+### 7. 两个端点的 Gaussian 衰减
+
+在 $t=0$ 和 $t=1$ 时，
+
+$$
+y(0)=y(1)=2,
+\qquad
+s=\frac{x}{2}.
+$$
+
+相位因子的模恒为 $1$，因此两个端点都有
+
+$$
+\left|e^{x^2/4}u(t,x)\right|^2
+=\frac12\left(e^{(x/2)^2}P(x/2)\right)^2,
+\qquad t\in\{0,1\}.
+$$
+
+右侧的可积性正是剖面加权可积性经过变量缩放后的结果，由此得到两个临界端点条件。
 
 ## 证明结构
 
