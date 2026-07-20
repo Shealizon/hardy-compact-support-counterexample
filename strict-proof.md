@@ -65,17 +65,25 @@ foreach ($package in $manifest.packages | Where-Object type -eq 'git') {
 `fabf563a7c95a166b8d7b6efca11c8b4dc9d911f`。同时必须从可信提交核对
 `lake-manifest.json` 本身，否则攻击者可以同时修改清单和依赖目录。
 
-## 第四步：清除项目缓存并完整构建
+## 第四步：只清除本项目缓存并完整构建
 
 ```powershell
-lake clean
-if ($LASTEXITCODE -ne 0) { throw 'FAIL: lake clean 失败' }
+$projectRoot = (Resolve-Path '.').Path
+$projectBuild = [System.IO.Path]::GetFullPath((Join-Path $projectRoot '.lake/build'))
+if ([System.IO.Path]::GetDirectoryName($projectBuild) -ne (Join-Path $projectRoot '.lake')) {
+  throw "FAIL: 拒绝删除项目外路径：$projectBuild"
+}
+if ([System.IO.Directory]::Exists($projectBuild)) {
+  [System.IO.Directory]::Delete($projectBuild, $true)
+}
 
 lake build
 if ($LASTEXITCODE -ne 0) { throw 'FAIL: lake build 失败' }
 'PASS: 无旧项目 .olean 缓存的完整构建成功'
 ```
 
+不要在这里使用不带目标的 `lake clean`：它还会删除 Mathlib 的全部本地构建缓存，
+导致数千个依赖模块被无谓地重新编译。依赖源码和提交已在第三步单独核验。
 `lake build` 成功只证明源码被 Lean 接受，必须与第二步和第五步一起判断。
 
 ## 第五步：锁定主定理原文并检查传递公理
@@ -116,7 +124,7 @@ example :
 
 $axiomOutput = lake env lean $audit 2>&1 | Out-String
 $leanExit = $LASTEXITCODE
-Remove-Item $audit -Force
+[System.IO.File]::Delete($audit)
 $axiomOutput
 if ($leanExit -ne 0) { throw 'FAIL: 主定理类型已改变，或审计文件无法编译' }
 

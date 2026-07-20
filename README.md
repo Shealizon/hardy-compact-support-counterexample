@@ -160,7 +160,7 @@ $$
 P''(x)=\bigl(4x^2+r(x)\bigr)P(x).
 $$
 
-在拼接区间之外，$P$ 就是外解或其反射，因此
+在拼接区间之外， $P$ 就是外解或其反射，因此
 
 $$
 r(x)=2
@@ -169,7 +169,7 @@ $$
 在充分大的 $|x|$ 上成立。同时，构造证明了
 
 $$
-\int_{\mathbb R}\bigl(e^{x^2}P(x)\bigr)^2\,dx<\infty.
+\int_{\mathbb R}\bigl(e^{x^2}P(x)\bigr)^2dx<\infty.
 $$
 
 ### 5. 解与实势的构造
@@ -182,7 +182,7 @@ b(t)=\frac{2t-1}{4q(t)},
 r_{\mathrm{ext}}=2,
 $$
 
-这里 $r_{\mathrm{ext}}$ 表示剖面余项 $r$ 在拼接区域外的常值；Lean 定义中的字段名是 `remainderInf`。它不是另一个函数，也不是 `arc_infty`。
+这里 $r_{\mathrm{ext}}$ 表示剖面余项 $r$ 在拼接区域外的常值；Lean 定义中的字段名是 `remainderInf`。
 
 定义振幅和相位
 
