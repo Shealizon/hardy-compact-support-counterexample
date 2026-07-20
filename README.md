@@ -104,7 +104,7 @@ $$
 $$
 J(x)=\int_0^x e^{-2s^2}\,ds,
 \qquad
-C_*=\int_0^\infty e^{-2s^2}\,ds.
+C_{\ast}=\int_0^\infty e^{-2s^2}\,ds.
 $$
 
 定义外部函数
@@ -115,27 +115,27 @@ H_C(x)=e^{2x^2}\bigl(C-J(x)\bigr),
 F_C(x)=e^{-x^2}H_C(x).
 $$
 
-选择 $C=C_*$ 后，在 $x\ge 0$ 上有
+选择 $C=C_{\ast}$ 后，在 $x\ge 0$ 上有
 
 $$
-C_*-J(x)=\int_x^\infty e^{-2s^2}\,ds>0.
+C_{\ast}-J(x)=\int_x^\infty e^{-2s^2}\,ds>0.
 $$
 
-因此 $F_{C_*}$ 是正的衰减外解，并满足
+因此 $F_{C_{\ast}}$ 是正的衰减外解，并满足
 
 $$
-F_{C_*}''(x)=\bigl(4x^2+2\bigr)F_{C_*}(x).
+F_{C_{\ast}}''(x)=\bigl(4x^2+2\bigr)F_{C_{\ast}}(x).
 $$
 
-Gaussian 尾积分估计还给出临界加权可积性。证明在负半轴使用反射函数 $F_{C_*}(-x)$。
+Gaussian 尾积分估计还给出临界加权可积性。证明在负半轴使用反射函数 $F_{C_{\ast}}(-x)$。
 
 ### 4. 正剖面的平滑拼接
 
 取两个光滑过渡函数 $\chi_+$ 和 $\chi_-$，把右侧外解、中心常数函数 $1$ 和左侧反射外解拼成
 
 $$
-P(x)=1+\chi_+(x)\bigl(F_{C_*}(x)-1\bigr)
-       +\chi_-(x)\bigl(F_{C_*}(-x)-1\bigr).
+P(x)=1+\chi_+(x)\bigl(F_{C_{\ast}}(x)-1\bigr)
+       +\chi_-(x)\bigl(F_{C_{\ast}}(-x)-1\bigr).
 $$
 
 构造保证
@@ -179,17 +179,19 @@ $$
 $$
 b(t)=\frac{2t-1}{4q(t)},
 \qquad
-r_\infty=2,
+r_{\mathrm{ext}}=2,
 $$
 
-并定义振幅和相位
+这里 $r_{\mathrm{ext}}$ 表示剖面余项 $r$ 在拼接区域外的常值；Lean 定义中的字段名是 `remainderInf`。它不是另一个函数，也不是 `arc_infty`。
+
+定义振幅和相位
 
 $$
-A(t,x)=\frac{1}{\sqrt{y(t)}}P\!\left(\frac{x}{y(t)}\right),
+A(t,x)=\frac{1}{\sqrt{y(t)}}P\left(\frac{x}{y(t)}\right),
 $$
 
 $$
-\phi(t,x)=b(t)x^2+rac{r_\infty}{4}\arctan(2t-1).
+\phi(t,x)=b(t)x^2+\frac{r_{\mathrm{ext}}}{4}\arctan(2t-1).
 $$
 
 候选解为
@@ -202,10 +204,12 @@ $$
 
 $$
 V(t,x)=
-\frac{r\!\left(x/y(t)\right)-r_\infty}{y(t)^2}.
+\frac{r\left(x/y(t)\right)-r_{\mathrm{ext}}}{y(t)^2}.
 $$
 
-这个公式直接说明 $V$ 是实值函数。由于 $r-r_\infty$ 有界且 $y(t)$ 始终远离零，$V$ 在 $[0,1]\times\mathbb R$ 上一致有界。
+这个公式直接说明 $V$ 是实值函数。
+
+由于 $r-r_{\mathrm{ext}}$ 有界且 $y(t)$ 始终远离零，势函数 $V(t,x)$ 在 $[0,1]\times\mathbb R$ 上一致有界。
 
 ### 6. Schrodinger 恒等式
 
@@ -223,7 +227,7 @@ $$
 i\partial_tu+\partial_x^2u=Vu.
 $$
 
-此外，当 $|x/y(t)|$ 充分大时 $r(x/y(t))=r_\infty$，所以对应的 $V(t,x)$ 等于零。
+此外，当 $|x/y(t)|$ 充分大时 $r(x/y(t))=r_{\mathrm{ext}}$，所以对应的 $V(t,x)$ 等于零。
 
 ### 7. 两个端点的 Gaussian 衰减
 
