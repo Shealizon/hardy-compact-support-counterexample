@@ -1,5 +1,7 @@
 # Hardy 端点紧支撑实势反例的 Lean 形式化
 
+[![Lean CI](https://github.com/Shealizon/hardy-compact-support-counterexample/actions/workflows/lean-ci.yml/badge.svg?branch=main)](https://github.com/Shealizon/hardy-compact-support-counterexample/actions/workflows/lean-ci.yml)
+
 本项目使用 Lean 4 和 Mathlib，形式化一维 Schrodinger 方程在 Hardy 不确定性原理临界端点处的一个非平凡解：存在光滑、有界、实值的势函数，并且势函数在每个固定时刻都具有紧支撑，而解在两个端点时刻满足临界 Gaussian 加权可积性。
 
 ## 主定理
