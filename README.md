@@ -1,12 +1,14 @@
-# Hardy 端点紧支撑实势反例的 Lean 形式化
+# Lean Formalization of a Hardy Endpoint Counterexample with a Compactly Supported Real Potential
 
 [![Lean CI](https://github.com/Shealizon/hardy-compact-support-counterexample/actions/workflows/lean-ci.yml/badge.svg?branch=main)](https://github.com/Shealizon/hardy-compact-support-counterexample/actions/workflows/lean-ci.yml)
 
-本项目使用 Lean 4 和 Mathlib，形式化一维 Schrodinger 方程在 Hardy 不确定性原理临界端点处的一个非平凡解：存在光滑、有界、实值的势函数，并且势函数在每个固定时刻都具有紧支撑，而解在两个端点时刻满足临界 Gaussian 加权可积性。
+[Chinese](README_CN.md)
 
-## 主定理
+This project uses Lean 4 and Mathlib to formalize a nontrivial solution of the one-dimensional Schrodinger equation at the critical endpoint of the Hardy uncertainty principle. It proves the existence of a smooth, bounded, real-valued potential whose spatial support is compact at every fixed time, together with a solution satisfying critical Gaussian weighted integrability at both endpoint times.
 
-主定理位于 [`HardyCompactSupport.lean`](HardyCompactSupport.lean)：
+## Main Theorem
+
+The main theorem is stated in [`HardyCompactSupport.lean`](HardyCompactSupport.lean):
 
 ```lean
 theorem exists_nontrivial_endpoint_solution_with_compactly_supported_real_potential :
@@ -29,33 +31,33 @@ theorem exists_nontrivial_endpoint_solution_with_compactly_supported_real_potent
         (fun x : ℝ => ‖((Real.exp (x^2 / 4) : ℝ) : ℂ) * u 1 x‖^2)
 ```
 
-它逐项表达以下结论：
+It states the following properties explicitly:
 
-1. `u` 是复值光滑函数，`V` 是实值光滑函数。
-2. 存在某个 `t ∈ [0,1]` 和 `x ∈ ℝ`，使得 `u t x ≠ 0`。
-3. `u` 和 `V` 逐点满足一维 Schrodinger 方程。
-4. `V` 在整个时间区间上一致有界。
-5. 对每个固定时刻 `t`，`V t` 的拓扑支撑 `tsupport (V t)` 是 `ℝ` 中的紧集。
-6. `u 0` 和 `u 1` 满足临界 Gaussian 加权平方可积性。
+1. `u` is a smooth complex-valued function and `V` is a smooth real-valued function.
+2. There are `t ∈ [0,1]` and `x ∈ ℝ` such that `u t x ≠ 0`.
+3. `u` and `V` satisfy the one-dimensional Schrodinger equation pointwise.
+4. `V` is uniformly bounded throughout the time interval.
+5. For each fixed time `t`, the topological support `tsupport (V t)` is a compact subset of `ℝ`.
+6. `u 0` and `u 1` satisfy the critical Gaussian weighted square-integrability condition.
 
-## 数学说明
+## Mathematical Overview
 
-### 1. 方程与临界端点条件
+### 1. Equation and Critical Endpoint Condition
 
-考虑一维含势 Schrodinger 方程
+Consider the one-dimensional Schrodinger equation with a potential:
 
 $$
 i\partial_t u(t,x)+\partial_x^2u(t,x)=V(t,x)u(t,x),
 \qquad (t,x)\in[0,1]\times\mathbb R.
 $$
 
-目标是构造一个非零光滑解 $u$ 和一个光滑、有界、实值的势 $V$，使得
+The goal is to construct a nonzero smooth solution $u$ and a smooth, bounded, real-valued potential $V$ such that
 
 $$
 e^{x^2/4}u(0,x),\qquad e^{x^2/4}u(1,x)
 $$
 
-都属于 $L^2(\mathbb R)$。等价地，需要证明
+both belong to $L^2(\mathbb R)$. Equivalently, one must prove
 
 $$
 \int_{\mathbb R}e^{x^2/2}|u(0,x)|^2\,dx<\infty,
@@ -63,130 +65,116 @@ $$
 \int_{\mathbb R}e^{x^2/2}|u(1,x)|^2\,dx<\infty.
 $$
 
-这里的系数 $1/4$ 正是归一化时间区间 $[0,1]$ 上使用的 Hardy 临界 Gaussian 权重。
+The coefficient $1/4$ is the critical Hardy Gaussian weight for the normalized time interval $[0,1]$.
 
-### 2. 时间宽度与相似变量
+### 2. Time-Dependent Width and Similarity Variable
 
-定义
+Define
 
 $$
-q(t)=(1-t)^2+t^2,
-\qquad
-y(t)=2\sqrt{q(t)},
-\qquad
+q(t)=(1-t)^2+t^2,\qquad
+y(t)=2\sqrt{q(t)},\qquad
 s=\frac{x}{y(t)}.
 $$
 
-因为
+Since
 
 $$
 q(t)=2\left(t-\frac12\right)^2+\frac12>0,
 $$
 
-所以 $y(t)$ 在所有时刻都严格为正。它还满足
+$y(t)$ is strictly positive at every time. It also satisfies
 
 $$
-y(t)^2=4q(t),
-\qquad
+y(t)^2=4q(t),\qquad
 y''(t)=\frac{16}{y(t)^3}.
 $$
 
-相似变量 $s=x/y(t)$ 把随时间变化的空间尺度转换为一个固定剖面变量。
+The similarity variable $s=x/y(t)$ converts the time-dependent spatial scale into a fixed profile variable.
 
-### 3. Gaussian 尾部外解
+### 3. Gaussian-Tail Exterior Solution
 
-从 Gaussian 核
+Start from the Gaussian kernel
 
 $$
 K(x)=e^{-2x^2}
 $$
 
-出发，令
+and define
 
 $$
-J(x)=\int_0^x e^{-2s^2}\,ds,
-\qquad
+J(x)=\int_0^x e^{-2s^2}\,ds,\qquad
 C_{\ast}=\int_0^\infty e^{-2s^2}\,ds.
 $$
 
-定义外部函数
+For a constant $C$, define the exterior functions
 
 $$
-H_C(x)=e^{2x^2}\bigl(C-J(x)\bigr),
-\qquad
+H_C(x)=e^{2x^2}\bigl(C-J(x)\bigr),\qquad
 F_C(x)=e^{-x^2}H_C(x).
 $$
 
-选择 $C=C_{\ast}$ 后，在 $x\ge 0$ 上有
+With $C=C_{\ast}$, for $x\ge 0$ one has
 
 $$
 C_{\ast}-J(x)=\int_x^\infty e^{-2s^2}\,ds>0.
 $$
 
-因此 $F_{C_{\ast}}$ 是正的衰减外解，并满足
+Consequently, $F_{C_{\ast}}$ is a positive decaying exterior solution satisfying
 
 $$
 F_{C_{\ast}}''(x)=\bigl(4x^2+2\bigr)F_{C_{\ast}}(x).
 $$
 
-Gaussian 尾积分估计还给出临界加权可积性。证明在负半轴使用反射函数 $F_{C_{\ast}}(-x)$。
+Gaussian tail estimates also give the required critical weighted integrability. On the negative half-line, the construction uses the reflected function $F_{C_{\ast}}(-x)$.
 
-### 4. 正剖面的平滑拼接
+### 4. Smooth Gluing of a Positive Profile
 
-取两个光滑过渡函数 $\chi_+$ 和 $\chi_-$，把右侧外解、中心常数函数 $1$ 和左侧反射外解拼成
+Choose two smooth cutoff functions $\chi_+$ and $\chi_-$. Glue the right exterior solution, the central constant function $1$, and the reflected left exterior solution into
 
 $$
 P(x)=1+\chi_+(x)\bigl(F_{C_{\ast}}(x)-1\bigr)
        +\chi_-(x)\bigl(F_{C_{\ast}}(-x)-1\bigr).
 $$
 
-构造保证
+The construction ensures
 
 $$
-P\in C^\infty(\mathbb R),
-\qquad
-P(x)>0,
-\qquad
+P\in C^\infty(\mathbb R),\qquad
+P(x)>0,\qquad
 P(0)=1.
 $$
 
-因为 $P$ 从不为零，可以定义剖面余项
+Because $P$ never vanishes, define the profile remainder
 
 $$
 r(x)=\frac{P''(x)}{P(x)}-4x^2.
 $$
 
-于是恒有振子型方程
+The oscillator-type equation
 
 $$
-P''(x)=\bigl(4x^2+r(x)\bigr)P(x).
+P''(x)=\bigl(4x^2+r(x)\bigr)P(x)
 $$
 
-在拼接区间之外， $P$ 就是外解或其反射，因此
-
-$$
-r(x)=2
-$$
-
-在充分大的 $|x|$ 上成立。同时，构造证明了
+then holds identically. Outside the gluing region, $P$ equals an exterior solution or its reflection, so $r(x)=2$ for all sufficiently large $|x|$. The construction also proves
 
 $$
 \int_{\mathbb R}\bigl(e^{x^2}P(x)\bigr)^2dx<\infty.
 $$
 
-### 5. 解与实势的构造
+### 5. Construction of the Solution and Real Potential
 
-令
+Let
 
 $$
-b(t)=\frac{2t-1}{4q(t)},
-\qquad
+b(t)=\frac{2t-1}{4q(t)},\qquad
 r_{\mathrm{ext}}=2,
 $$
 
-这里 $r_{\mathrm{ext}}$ 表示剖面余项 $r$ 在拼接区域外的常值；Lean 定义中的字段名是 `remainderInf`。
+where $r_{\mathrm{ext}}$ is the constant value of the profile remainder $r$ outside the gluing region. The corresponding field in the Lean definition is named `remainderInf`.
 
-定义振幅和相位
+Define the amplitude and phase by
 
 $$
 A(t,x)=\frac{1}{\sqrt{y(t)}}P\left(\frac{x}{y(t)}\right),
@@ -196,52 +184,45 @@ $$
 \phi(t,x)=b(t)x^2+\frac{r_{\mathrm{ext}}}{4}\arctan(2t-1).
 $$
 
-候选解为
+The candidate solution and potential are
 
 $$
 u(t,x)=A(t,x)e^{i\phi(t,x)},
 $$
 
-势函数为
-
 $$
-V(t,x)=
-\frac{r\left(x/y(t)\right)-r_{\mathrm{ext}}}{y(t)^2}.
+V(t,x)=\frac{r\left(x/y(t)\right)-r_{\mathrm{ext}}}{y(t)^2}.
 $$
 
-这个公式直接说明 $V$ 是实值函数。
+This formula directly shows that $V$ is real-valued. Since $r-r_{\mathrm{ext}}$ is bounded and $y(t)$ stays uniformly away from zero, $V(t,x)$ is uniformly bounded on $[0,1]\times\mathbb R$.
 
-由于 $r-r_{\mathrm{ext}}$ 有界且 $y(t)$ 始终远离零，势函数 $V(t,x)$ 在 $[0,1]\times\mathbb R$ 上一致有界。
+### 6. Schrodinger Identity
 
-### 6. Schrodinger 恒等式
-
-把 $u=Ae^{i\phi}$ 代入方程后，剩余项分成实部和虚部。虚部由振幅输运恒等式消去，实部则由
+Substituting $u=Ae^{i\phi}$ into the equation separates the residual into real and imaginary parts. The amplitude transport identity cancels the imaginary part. The real part is canceled using
 
 $$
-P''(s)=\bigl(4s^2+r(s)\bigr)P(s),
-\qquad
-y''(t)=\frac{16}{y(t)^3}
+P''(s)=\bigl(4s^2+r(s)\bigr)P(s),\qquad
+y''(t)=\frac{16}{y(t)^3},
 $$
 
-以及相位导数恒等式消去。最终得到逐点等式
+together with the phase derivative identities. This yields the pointwise equality
 
 $$
 i\partial_tu+\partial_x^2u=Vu.
 $$
 
-此外，当 $|x/y(t)|$ 充分大时 $r(x/y(t))=r_{\mathrm{ext}}$，所以对应的 $V(t,x)$ 等于零。
+Moreover, when $|x/y(t)|$ is sufficiently large, $r(x/y(t))=r_{\mathrm{ext}}$, and hence $V(t,x)=0$.
 
-### 7. 两个端点的 Gaussian 衰减
+### 7. Gaussian Decay at the Two Endpoints
 
-在 $t=0$ 和 $t=1$ 时，
+At $t=0$ and $t=1$,
 
 $$
-y(0)=y(1)=2,
-\qquad
+y(0)=y(1)=2,\qquad
 s=\frac{x}{2}.
 $$
 
-相位因子的模恒为 $1$，因此两个端点都有
+The phase factor has modulus $1$, so at both endpoints
 
 $$
 \left|e^{x^2/4}u(t,x)\right|^2
@@ -249,67 +230,70 @@ $$
 \qquad t\in\{0,1\}.
 $$
 
-右侧的可积性正是剖面加权可积性经过变量缩放后的结果，由此得到两个临界端点条件。
+The right-hand side is integrable by the weighted profile estimate after a change of variables. This proves both critical endpoint conditions.
 
-## 证明结构
+## Proof Structure
 
-证明按照依赖关系拆分为以下模块：
+The proof is divided into the following modules according to their dependencies:
 
-| 模块 | 作用 |
+| Module | Role |
 | --- | --- |
-| `AlgebraicIdentities.lean` | 基础有理式与次数恒等式 |
-| `WidthEquation.lean` | 宽度函数满足的常微分方程 |
-| `TimeScaling.lean` | 时间缩放、宽度正性和导数公式 |
-| `PhaseEquation.lean` | 相位与输运系数恒等式 |
-| `ConstructionStatement.lean` | 中间构造所需的结构化命题 |
-| `ResidualIdentity.lean` | Schrodinger 剩余项的代数消去 |
-| `DecayEstimates.lean` | 非零性、有界性和端点衰减的中间结论 |
-| `ExplicitSolution.lean` | 显式解、相位和势函数的导数计算 |
-| `GaussianTailProfile.lean` | Gaussian 尾积分与外部剖面 |
-| `PositiveProfile.lean` | 正光滑剖面的拼接与加权可积性 |
-| `ConstructedSolution.lean` | 最终解和势函数的定义及光滑性 |
-| `SchrodingerIdentity.lean` | 构造函数满足 Schrodinger 方程 |
-| `EndpointDecayAndSupport.lean` | 有界性、区间外消失和端点积分 |
-| `EndpointVerification.lean` | 将区间外消失转化为拓扑支撑紧性 |
+| `AlgebraicIdentities.lean` | Basic rational and polynomial-degree identities |
+| `WidthEquation.lean` | Ordinary differential equation satisfied by the width function |
+| `TimeScaling.lean` | Time scaling, positivity of the width, and derivative formulas |
+| `PhaseEquation.lean` | Phase and transport-coefficient identities |
+| `ConstructionStatement.lean` | Structured propositions required by the intermediate construction |
+| `ResidualIdentity.lean` | Algebraic cancellation of the Schrodinger residual |
+| `DecayEstimates.lean` | Intermediate nontriviality, boundedness, and endpoint decay results |
+| `ExplicitSolution.lean` | Derivative calculations for the explicit solution, phase, and potential |
+| `GaussianTailProfile.lean` | Gaussian tail integrals and the exterior profile |
+| `PositiveProfile.lean` | Gluing of a smooth positive profile and weighted integrability |
+| `ConstructedSolution.lean` | Definitions and smoothness of the final solution and potential |
+| `SchrodingerIdentity.lean` | Verification of the Schrodinger equation |
+| `EndpointDecayAndSupport.lean` | Boundedness, exterior vanishing, and endpoint integrals |
+| `EndpointVerification.lean` | Conversion of exterior vanishing into compact topological support |
 
-公开入口只导入最后一个验证模块，因此读者可以先阅读主定理，再沿导入链逐层查看细节。
+The public entry point imports only the final verification module. A reader can therefore start with the main theorem and follow the import chain into progressively finer details.
 
-## 构建与检查
+## Build and Verification
 
-项目使用 Lean `v4.31.0` 和对应版本的 Mathlib。
+The project uses Lean `v4.31.0` and the corresponding Mathlib release.
 
 ```powershell
 lake update
 lake build
 ```
 
-只检查主定理入口：
+To check only the main theorem entry point:
 
 ```powershell
 lake env lean HardyCompactSupport.lean
 ```
 
-重新生成证明状态报告：
+To regenerate the proof-status report:
 
 ```powershell
 python scripts/generate_status.py
 ```
 
-当前状态见 [`STATUS.md`](STATUS.md)：全部 208 个定理和引理均已完成，源码中没有证明占位符，也没有导入归档的旧证明模块。
+See [`STATUS.md`](STATUS.md) for the current status. All 208 theorems and lemmas are complete, the source contains no proof placeholders, and the archived legacy proof modules are not imported.
 
-### 严格正确性审计
+### Strict Correctness Audit
 
-完整步骤见 [strict-proof.md](strict-proof.md)。
+See [strict-proof.md](strict-proof.md) for the complete procedure.
 
-## 目录
+## Directory Layout
 
 ```text
 .
-├── HardyCompactSupport.lean       # 完整展开条件的主定理入口
-├── HardyCompactSupport/           # 分层证明模块
-├── scripts/generate_status.py     # 构建与证明数量检查
-├── STATUS.md                      # 人类可读状态报告
-├── status.json                    # 机器可读状态报告
+├── HardyCompactSupport.lean       # Main theorem entry point with all conditions expanded
+├── HardyCompactSupport/           # Layered proof modules
+├── scripts/generate_status.py     # Build and theorem-count checks
+├── README_CN.md                   # Chinese version of this document
+├── strict-proof.md                # Strict proof-audit procedure
+├── strict-proof_CN.md             # Chinese version of the audit procedure
+├── STATUS.md                      # Human-readable status report
+├── status.json                    # Machine-readable status report
 ├── lakefile.lean
 └── lean-toolchain
 ```
