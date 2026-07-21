@@ -63,7 +63,7 @@ lemma gaussianTail_pos (x : ℝ) :
   apply (MeasureTheory.setIntegral_pos_iff_support_of_nonneg_ae
     (Filter.Eventually.of_forall fun s => (Real.exp_pos _).le)
     gaussianKernel_integrable.integrableOn).2
-  simp [gaussianKernel, Function.support, (Real.exp_pos _).ne']
+  simp [Function.support, (Real.exp_pos _).ne']
 
 /-- NODE HE.CompactSupportConstruction.gaussian_kernel_tends_to_zero
 deps:
@@ -94,7 +94,7 @@ lemma gaussianFirstMoment_tail (x : ℝ) :
         simpa only [Pi.mul_apply, id_eq, one_mul, mul_one] using hinnerRaw
       have h := (Real.hasDerivAt_exp (-2 * (y * y))).comp y hinner
       convert h using 1 <;>
-        first | rfl | (funext z; simp [Function.comp_def, pow_two]) | ring
+        first | rfl | (funext z; simp [pow_two]) | ring
     have h := hkernel.const_mul (-(1 / 4 : ℝ))
     convert h using 1 <;> first | rfl | ring
   have hint : MeasureTheory.IntegrableOn
@@ -106,7 +106,8 @@ lemma gaussianFirstMoment_tail (x : ℝ) :
     simpa using gaussianKernel_tendsto_zero.const_mul (-(1 / 4 : ℝ))
   have h := MeasureTheory.integral_Ioi_of_hasDerivAt_of_tendsto'
     hderiv hint htend
-  convert h using 1 <;> ring
+  convert h using 1
+  all_goals ring
 
 /-- NODE HE.CompactSupportConstruction.gaussian_tail_mills_bound
 deps: HE.CompactSupportConstruction.gaussian_kernel_integrable, HE.CompactSupportConstruction.gaussian_first_moment_tail
@@ -183,7 +184,7 @@ lemma gaussianKernel_hasDerivAt (x : ℝ) :
     simpa only [Pi.mul_apply, id_eq, one_mul, mul_one] using hinnerRaw
   have h := (Real.hasDerivAt_exp (-2 * (x * x))).comp x hinner
   convert h using 1 <;>
-    first | rfl | (funext y; simp [Function.comp_def, pow_two]) | ring
+    first | rfl | (funext y; simp [pow_two]) | ring
 
 lemma gaussianPrimitive_hasDerivAt (x : ℝ) :
     HasDerivAt gaussianPrimitive (gaussianKernel x) x := by
@@ -246,8 +247,7 @@ lemma exteriorProfile_hasDerivAt (C x : ℝ) :
         -gaussianKernel x := by
     rw [show deriv (fun y : ℝ => C - gaussianPrimitive y) x =
         -deriv gaussianPrimitive x by
-          simpa using
-            (deriv_const_sub (f := gaussianPrimitive) (x := x) C)]
+          exact deriv_const_sub (f := gaussianPrimitive) (x := x) C]
     rw [(gaussianPrimitive_hasDerivAt x).deriv]
   have hcancel : Real.exp (2 * x^2) * gaussianKernel x = 1 := by
     unfold gaussianKernel
@@ -382,7 +382,7 @@ lemma exteriorMasterProfile_hasDerivAt (C x : ℝ) :
       simpa only [Pi.mul_apply, id_eq, one_mul, mul_one] using hinnerRaw
     have h := (Real.hasDerivAt_exp (-1 * (x * x))).comp x hinner
     convert h using 1 <;>
-      first | rfl | (funext y; simp [Function.comp_def, pow_two]) | ring
+      first | rfl | (funext y; simp [pow_two]) | ring
   have h := hGaussian.mul (exteriorProfile_hasDerivAt C x)
   unfold exteriorMasterProfile exteriorMasterFirst
   convert h using 1 <;> first | rfl | ring
@@ -403,14 +403,14 @@ lemma exteriorMasterFirst_hasDerivAt (C x : ℝ) :
       simpa only [Pi.mul_apply, id_eq, one_mul, mul_one] using hinnerRaw
     have h := (Real.hasDerivAt_exp (-1 * (x * x))).comp x hinner
     convert h using 1 <;>
-      first | rfl | (funext y; simp [Function.comp_def, pow_two]) | ring
+      first | rfl | (funext y; simp [pow_two]) | ring
   have hBracket : HasDerivAt
       (fun y : ℝ => 2 * y * exteriorProfile C y - 1)
       (2 * exteriorProfile C x +
         2 * x * (4 * x * exteriorProfile C x - 1)) x := by
     have h := (((hasDerivAt_id x).const_mul 2).mul
       (exteriorProfile_hasDerivAt C x)).sub_const 1
-    convert h using 1 <;> first | rfl | simp | ring
+    convert h using 1 <;> first | rfl | simp
   have h := hGaussian.mul hBracket
   unfold exteriorMasterProfile exteriorMasterFirst
   convert h using 1 <;> first | rfl | ring

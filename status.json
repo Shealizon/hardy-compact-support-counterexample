@@ -793,56 +793,56 @@
       "name": "gaussianTail_le",
       "kind": "lemma",
       "file": "HardyCompactSupport/GaussianTailProfile.lean",
-      "line": 115,
+      "line": 116,
       "complete": true
     },
     {
       "name": "exteriorProfile_halfMass_pos",
       "kind": "lemma",
       "file": "HardyCompactSupport/GaussianTailProfile.lean",
-      "line": 145,
+      "line": 146,
       "complete": true
     },
     {
       "name": "exteriorProfile_halfMass_le",
       "kind": "lemma",
       "file": "HardyCompactSupport/GaussianTailProfile.lean",
-      "line": 155,
+      "line": 156,
       "complete": true
     },
     {
       "name": "gaussianKernel_hasDerivAt",
       "kind": "lemma",
       "file": "HardyCompactSupport/GaussianTailProfile.lean",
-      "line": 176,
+      "line": 177,
       "complete": true
     },
     {
       "name": "gaussianPrimitive_hasDerivAt",
       "kind": "lemma",
       "file": "HardyCompactSupport/GaussianTailProfile.lean",
-      "line": 187,
+      "line": 188,
       "complete": true
     },
     {
       "name": "gaussianPrimitive_smooth",
       "kind": "lemma",
       "file": "HardyCompactSupport/GaussianTailProfile.lean",
-      "line": 197,
+      "line": 198,
       "complete": true
     },
     {
       "name": "exteriorProfile_smooth",
       "kind": "lemma",
       "file": "HardyCompactSupport/GaussianTailProfile.lean",
-      "line": 213,
+      "line": 214,
       "complete": true
     },
     {
       "name": "exteriorProfile_hasDerivAt",
       "kind": "lemma",
       "file": "HardyCompactSupport/GaussianTailProfile.lean",
-      "line": 222,
+      "line": 223,
       "complete": true
     },
     {
@@ -1094,21 +1094,21 @@
       "name": "gluedWeightedSquare_integrableOn_right",
       "kind": "lemma",
       "file": "HardyCompactSupport/PositiveProfile.lean",
-      "line": 415,
+      "line": 416,
       "complete": true
     },
     {
       "name": "gluedWeightedSquare_integrableOn_left",
       "kind": "lemma",
       "file": "HardyCompactSupport/PositiveProfile.lean",
-      "line": 429,
+      "line": 430,
       "complete": true
     },
     {
       "name": "gluedWeightedSquare_integrable",
       "kind": "lemma",
       "file": "HardyCompactSupport/PositiveProfile.lean",
-      "line": 443,
+      "line": 444,
       "complete": true
     },
     {
@@ -1171,112 +1171,112 @@
       "name": "compactAmplitude_t_deriv",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 127,
+      "line": 129,
       "complete": true
     },
     {
       "name": "complexPhaseFactor_hasDerivAt",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 163,
+      "line": 165,
       "complete": true
     },
     {
       "name": "complexAmplitudePhase_hasDerivAt",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 177,
+      "line": 179,
       "complete": true
     },
     {
       "name": "compactAmplitude_differentiableAt_t",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 188,
+      "line": 190,
       "complete": true
     },
     {
       "name": "compactPhase_differentiableAt_t",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 204,
+      "line": 206,
       "complete": true
     },
     {
       "name": "compactSolution_t_deriv",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 217,
+      "line": 219,
       "complete": true
     },
     {
       "name": "compactAmplitude_differentiableAt_x",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 234,
+      "line": 236,
       "complete": true
     },
     {
       "name": "compactPhase_differentiableAt_x",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 246,
+      "line": 248,
       "complete": true
     },
     {
       "name": "compactSolution_x_deriv",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 257,
+      "line": 259,
       "complete": true
     },
     {
       "name": "compactAmplitude_x_deriv_differentiableAt",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 274,
+      "line": 276,
       "complete": true
     },
     {
       "name": "compactPhase_x_deriv_differentiableAt",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 291,
+      "line": 293,
       "complete": true
     },
     {
       "name": "compactSolution_x_second_deriv",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 307,
+      "line": 309,
       "complete": true
     },
     {
       "name": "compactResidual_decomposition",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 358,
+      "line": 361,
       "complete": true
     },
     {
       "name": "compactResidual_imaginary",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 388,
+      "line": 391,
       "complete": true
     },
     {
       "name": "compactResidual_real",
       "kind": "lemma",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 429,
+      "line": 432,
       "complete": true
     },
     {
       "name": "compactCandidate_schrodinger",
       "kind": "theorem",
       "file": "HardyCompactSupport/SchrodingerIdentity.lean",
-      "line": 487,
+      "line": 490,
       "complete": true
     },
     {
@@ -1462,5 +1462,5 @@
       "complete": true
     }
   ],
-  "build_output": "_̵d̵e̵f̵,̵ ̵p̵o̵w̵_̵t̵w̵o̵]̵[̲p̲o̲w̲_̲t̲w̲o̲]̲\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: HardyCompactSupport/GaussianTailProfile.lean:413:47: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: HardyCompactSupport/GaussianTailProfile.lean:413:47: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n⚠ [8560/8574] Replayed HardyCompactSupport.PositiveProfile\nwarning: HardyCompactSupport/PositiveProfile.lean:244:48: This simp argument is unused:\n  Function.comp_def\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: HardyCompactSupport/PositiveProfile.lean:255:51: This simp argument is unused:\n  Function.comp_def\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: HardyCompactSupport/PositiveProfile.lean:237:50: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:244:69: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:255:72: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:237:50: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:244:69: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: HardyCompactSupport/PositiveProfile.lean:255:72: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\ninfo: HardyCompactSupport/PositiveProfile.lean:393:26: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nwarning: HardyCompactSupport/PositiveProfile.lean:393:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n⚠ [8570/8574] Replayed HardyCompactSupport.SchrodingerIdentity\nwarning: HardyCompactSupport/SchrodingerIdentity.lean:121:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: HardyCompactSupport/SchrodingerIdentity.lean:352:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nℹ [8571/8574] Replayed HardyCompactSupport.EndpointDecayAndSupport\ninfo: HardyCompactSupport/EndpointDecayAndSupport.lean:81:2: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: HardyCompactSupport/EndpointDecayAndSupport.lean:104:2: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n✔ [8573/8574] Built HardyCompactSupport (61s)\nBuild completed successfully (8574 jobs).\n"
+  "build_output": "ℹ [8559/8574] Replayed HardyCompactSupport.GaussianTailProfile\ninfo: HardyCompactSupport/GaussianTailProfile.lean:97:51: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: HardyCompactSupport/GaussianTailProfile.lean:165:4: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: HardyCompactSupport/GaussianTailProfile.lean:187:47: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: HardyCompactSupport/GaussianTailProfile.lean:256:4: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: HardyCompactSupport/GaussianTailProfile.lean:344:4: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: HardyCompactSupport/GaussianTailProfile.lean:385:49: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: HardyCompactSupport/GaussianTailProfile.lean:406:49: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nℹ [8560/8574] Replayed HardyCompactSupport.PositiveProfile\ninfo: HardyCompactSupport/PositiveProfile.lean:394:14: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nℹ [8571/8574] Replayed HardyCompactSupport.EndpointDecayAndSupport\ninfo: HardyCompactSupport/EndpointDecayAndSupport.lean:81:2: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: HardyCompactSupport/EndpointDecayAndSupport.lean:104:2: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nBuild completed successfully (8574 jobs).\n"
 }

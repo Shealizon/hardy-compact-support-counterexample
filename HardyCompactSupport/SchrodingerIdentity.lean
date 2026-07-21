@@ -118,7 +118,9 @@ lemma compactAmplitude_x_second_deriv (P : CompactProfileData) (t x : ℝ) :
   have hwhole := (hsecond.const_mul
     (1 / Real.sqrt (TimeScaling.ySym t))).div_const (TimeScaling.ySym t)
   have hvalue := hwhole.deriv
-  convert hvalue using 1 <;> simp <;> ring
+  convert hvalue using 1
+  all_goals simp
+  all_goals ring
 
 /-- NODE HE.CompactSupportConstruction.compact_amplitude_t_deriv
 deps:
@@ -349,7 +351,8 @@ lemma compactSolution_x_second_deriv (P : CompactProfileData) (t x : ℝ) :
               ((deriv (fun ξ : ℝ => compactPhase P t ξ) η : ℝ) : ℂ)))) _ x at htotal
   have hv := htotal.deriv
   simp only [Pi.mul_apply] at hv
-  convert hv using 1 <;> ring
+  convert hv using 1
+  all_goals ring
 
 /-- NODE HE.CompactSupportConstruction.compact_residual_decomposition
 deps: HE.CompactSupportConstruction.compact_solution_t_deriv, HE.CompactSupportConstruction.compact_solution_x_second_deriv

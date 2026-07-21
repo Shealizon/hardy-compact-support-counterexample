@@ -234,14 +234,14 @@ lemma reflectedExteriorMaster_ode (C x : ℝ) :
       (4 * x^2 + 2) * exteriorMasterProfile C (-x) := by
   have hneg (y : ℝ) : HasDerivAt (fun z : ℝ => -z) (-1) y := by
     have hraw := (hasDerivAt_id y).const_mul (-1)
-    convert hraw using 1 <;> first | rfl | simp | ring
+    convert hraw using 1 <;> first | rfl | simp
   have hfirstDeriv (y : ℝ) :
       deriv (fun z : ℝ => exteriorMasterProfile C (-z)) y =
         -exteriorMasterFirst C (-y) := by
     have h := (exteriorMasterProfile_hasDerivAt C (-y)).comp y (hneg y)
     have h' : HasDerivAt (fun z : ℝ => exteriorMasterProfile C (-z))
         (-exteriorMasterFirst C (-y)) y := by
-      convert h using 1 <;> first | rfl | simp [Function.comp_def] | ring
+      convert h using 1 <;> first | rfl | simp
     exact h'.deriv
   have hfirstFun : deriv (fun y : ℝ => exteriorMasterProfile C (-y)) =
       fun y : ℝ => -exteriorMasterFirst C (-y) := by
@@ -252,7 +252,7 @@ lemma reflectedExteriorMaster_ode (C x : ℝ) :
   have htotal := h.neg
   have htotal' : HasDerivAt (fun y : ℝ => -exteriorMasterFirst C (-y))
       ((4 * x^2 + 2) * exteriorMasterProfile C (-x)) x := by
-    convert htotal using 1 <;> first | rfl | simp [Function.comp_def] | ring
+    convert htotal using 1 <;> first | rfl | simp
   exact htotal'.deriv
 
 /-- NODE HE.CompactSupportConstruction.glued_remainder_right_exterior
@@ -390,7 +390,8 @@ lemma gluedWeightedSquare_left_bound {x : ℝ} (hx : x < -2) :
       exteriorProfile gaussianHalfMass (-x) := by
     rw [gluedProfile_eq_left (le_of_lt hx)]
     have h := weightedExteriorMaster_eq gaussianHalfMass (-x)
-    convert h using 1 <;> ring
+    convert h using 1
+    all_goals ring
   rw [gluedWeightedSquare, hweighted]
   have hpos := exteriorProfile_halfMass_pos (by linarith : 0 ≤ -x)
   have hle := exteriorProfile_halfMass_le (by linarith : 0 < -x)
