@@ -78,7 +78,7 @@ lemma compactEndpointZeroNormSq (x : ℝ) :
   norm_num
   field_simp [ne_of_gt hsqrtPos]
   rw [hsqRe, sq_abs, Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 2)]
-  ring
+  ring_nf
 
 lemma compactEndpointOneNormSq (x : ℝ) :
     ‖((Real.exp (x^2 / 4) : ℝ) : ℂ) *
@@ -101,7 +101,7 @@ lemma compactEndpointOneNormSq (x : ℝ) :
   norm_num
   field_simp [ne_of_gt hsqrtPos]
   rw [hsqRe, sq_abs, Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 2)]
-  ring
+  ring_nf
 
 theorem compactCandidate_endpoint_integrable :
     MeasureTheory.Integrable

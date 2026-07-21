@@ -391,7 +391,7 @@ lemma gluedWeightedSquare_left_bound {x : ℝ} (hx : x < -2) :
     rw [gluedProfile_eq_left (le_of_lt hx)]
     have h := weightedExteriorMaster_eq gaussianHalfMass (-x)
     convert h using 1
-    all_goals ring
+    all_goals ring_nf
   rw [gluedWeightedSquare, hweighted]
   have hpos := exteriorProfile_halfMass_pos (by linarith : 0 ≤ -x)
   have hle := exteriorProfile_halfMass_le (by linarith : 0 < -x)

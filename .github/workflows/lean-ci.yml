@@ -28,6 +28,17 @@ jobs:
         uses: leanprover/lean-action@v1
         with:
           build: true
+          build-args: --wfail
           test: false
           lint: false
           use-mathlib-cache: true
+
+      - name: Require clean Lean diagnostics
+        shell: bash
+        run: |
+          output="$(lake build 2>&1)"
+          printf '%s\n' "$output"
+          if grep -Eq '^(warning|info):' <<< "$output"; then
+            echo 'Lean emitted a warning or informational suggestion.'
+            exit 1
+          fi
